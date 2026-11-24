@@ -111,3 +111,9 @@ analysis outputs with `python scripts/make_paper_figures.py`.
 ## Acknowledgements
 
 Technical and human support provided by the DIPC Supercomputing Center is gratefully acknowledged.
+
+## License and citation
+
+The code is released under the [MIT License](LICENSE). The datasets are not part of this repository
+and remain under the terms of their original sources. If you use this code, please cite it using the
+metadata in [`CITATION.cff`](CITATION.cff) (GitHub shows a "Cite this repository" button).

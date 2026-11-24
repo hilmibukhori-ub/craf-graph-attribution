@@ -7,6 +7,8 @@ name = "rusa"
 version = "0.1.0"
 description = "CRAF and RUSA: certified graph-property attribution for graph neural networks with admissible null graphs"
 requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Hilmi Aziz Bukhori", email = "hilmibukhori@ub.ac.id"}]
 dependencies = [
   "numpy>=1.24",
   "scipy>=1.10",

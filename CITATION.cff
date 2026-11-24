@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "CRAF: certified minimal graph-property explanations for graph neural networks"
+type: software
+authors:
+  - family-names: "Bukhori"
+    given-names: "Hilmi Aziz"
+    affiliation: "Department of Mathematics, Faculty of Mathematics and Natural Sciences, Universitas Brawijaya"
+    email: "hilmibukhori@ub.ac.id"
+repository-code: "https://github.com/hilmibukhori-ub/craf-graph-attribution"
+license: MIT
+version: "0.1.0"
+date-released: "2026-11-24"
+keywords:
+  - graph neural networks
+  - null graph models
+  - relational attribution
+  - simultaneous inference
+  - family-wise error rate
