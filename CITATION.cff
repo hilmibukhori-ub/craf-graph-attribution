@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Bukhori"
     given-names: "Hilmi Aziz"
-    affiliation: "Department of Mathematics, Faculty of Mathematics and Natural Sciences, Universitas Brawijaya"
+    affiliation: "Department of Mathematics, Faculty of Science, Technology, and Mathematics, Universitas Brawijaya"
     email: "hilmibukhori@ub.ac.id"
 repository-code: "https://github.com/hilmibukhori-ub/craf-graph-attribution"
 license: MIT
