@@ -1,0 +1,29 @@
+{
+ "config": "configs/pilot.yaml",
+ "config_sha256": "97590bec61f18ca5b2d75a3e8a2db14292897c0702b37966759a57a5168f6e5a",
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ },
+ "log": [
+  "S0: done in 69s (4800 instances)",
+  "S1_g050: done in 36s (2400 instances)",
+  "S1_g100: done in 69s (4800 instances)",
+  "S1_g150: done in 36s (2400 instances)",
+  "S1_g200: done in 37s (2400 instances)",
+  "S1_hetero: done in 36s (2400 instances)",
+  "S2: done in 73s (4800 instances)",
+  "S3: done in 70s (4800 instances)",
+  "S4: done in 69s (4800 instances)",
+  "S5: done in 69s (4800 instances)",
+  "AA_degree: done in 85s (4800 instances)",
+  "AA_block: done in 72s (4800 instances)"
+ ]
+}

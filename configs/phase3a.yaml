@@ -1,0 +1,38 @@
+# Phase 3A (CRAF) proof of concept. Frozen (scripts/freeze_plan.py) before the P3_multi pool
+# (master seed 20261222) and before any CRAF analysis of the reused pools.
+name: phase3a
+master_seed: 20261222
+model: sgc_ridge
+draws: 2
+swap_factor: 5.0
+chunk: 120
+attrs: [block, w1, w2, w3, w4]          # new pool: K18 candidates
+out_dir: outputs/phase3a
+scenarios:
+  P3_multi: 7200
+analysis:
+  delta: 0.005                          # = eps of Phases 2B/2C; advantage and sufficiency margin
+  alpha: 0.05
+  block: 100                            # replicates per independent experiment
+  budgets: [20, 40, 80]                 # b; budget B = b (1 + |L|) fits
+  lattice_attrs: [block, w1, w2, w3, w4]  # |L| = 16 (orders 0-2)
+  adaptive: {search_frac: 0.3333333333, n_min: 5, d_floor: 0.003, kappa: 1.0}
+  pools:                                # reused pools are read-only (Phases 2B/2C directories)
+    - {scenario: S7_hard, model: sgc_ridge, dir: /scratch/hilmibukhori/rusa_2c/outputs/phase2c/pool, aa: "strat:w1+w2", role: interaction_isolated}
+    - {scenario: S7_easy, model: sgc_ridge, dir: /scratch/hilmibukhori/rusa_2c/outputs/phase2c/pool, aa: "strat:w1+w2", role: interaction_easy}
+    - {scenario: S8_small_hard, model: sgc_ridge, dir: /scratch/hilmibukhori/rusa_2c/outputs/phase2c/pool, role: no_sufficient}
+    - {scenario: N6_hard, model: sgc_ridge, dir: /scratch/hilmibukhori/rusa_2b/outputs/phase2b/pool, aa: "strat:w3", role: many_sufficient_one_minimal}
+    - {scenario: S7_hard, model: sage, dir: /scratch/hilmibukhori/rusa_2c/outputs/phase2c_sage/pool, aa: "strat:w1+w2", role: neural_interaction}
+    - {scenario: P3_multi, model: sgc_ridge, dir: outputs/phase3a/pool, aa: "strat:w1+w2", role: multiple_minimal}
+  semisynthetic:                        # oracle Delta tables (1 - Brier units), t5 noise
+    n_exp: 2000
+    sd: 0.012
+    df_t: 5
+    seed: 3301
+    roles: {SS_boundary: worst_case_fwer, SS_nonmono_A: nonmonotone_empty_sufficient,
+            SS_nonmono_B: nonmonotone_two_minimal, SS_near: near_boundary}
+    tables:
+      SS_boundary: {degree: 0.005, "strat:a": 0.005, "strat:b": 0.005, "strat:c": 0.005, "strat:a+b": 0.005, "strat:a+c": 0.005, "strat:b+c": 0.005}
+      SS_nonmono_A: {degree: 0.0, "strat:a": 0.02, "strat:b": 0.02, "strat:c": 0.02, "strat:a+b": 0.0, "strat:a+c": 0.02, "strat:b+c": 0.02}
+      SS_nonmono_B: {degree: 0.02, "strat:a": 0.0, "strat:b": 0.02, "strat:c": 0.02, "strat:a+b": 0.02, "strat:a+c": 0.0, "strat:b+c": 0.0}
+      SS_near: {degree: 0.02, "strat:a": 0.008, "strat:b": 0.02, "strat:c": 0.002, "strat:a+b": 0.0, "strat:a+c": 0.002, "strat:b+c": 0.002}

@@ -1,0 +1,26 @@
+{
+ "R2": {
+  "cora": true
+ },
+ "R1": {
+  "no_fwer_flag_primary": true,
+  "no_marginal_flag_alpha05": false
+ },
+ "R4": {
+  "cora/gcn": true,
+  "cora/sage": true
+ },
+ "R3": {
+  "cora/gcn": {
+   "certified_member_outside_pcga_ladder": false,
+   "ni_holm_differs_from_craf": false,
+   "certified_specificity_over_L": true
+  },
+  "cora/sage": {
+   "certified_member_outside_pcga_ladder": false,
+   "ni_holm_differs_from_craf": false,
+   "certified_specificity_over_L": true
+  }
+ },
+ "natural_nonmonotonicity_certified": false
+}

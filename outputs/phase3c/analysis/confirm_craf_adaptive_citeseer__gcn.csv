@@ -1,0 +1,12 @@
+element,p_adv,p_suf,mean,n,status,cert_min,possible_min,min_among_cert,gap_set
+degree,3.392376157653798e-125,1.0,0.15029152245535837,100,advantage,False,False,False,
+strat:block,4.107602112513064e-27,1.0,0.08895373120976906,32,advantage,False,False,False,
+strat:clust,8.639435312950039e-33,1.0,0.1458127375304965,32,advantage,False,False,False,
+strat:fsim,6.487878144407189e-19,1.0,0.04408302938256756,33,advantage,False,False,False,
+strat:hop2,1.0138241360058064e-30,1.0,0.13569522204743106,32,advantage,False,False,False,
+strat:block+clust,2.3466387090185507e-27,1.0,0.08818864882352354,32,advantage,False,False,False,
+strat:block+fsim,8.154464959712016e-26,1.0,0.025753103423382568,45,advantage,False,False,False,
+strat:block+hop2,4.179184244230109e-25,1.0,0.08603381841707425,32,advantage,False,False,False,
+strat:clust+fsim,1.868826867634728e-22,1.0,0.03469920126995538,36,advantage,False,False,False,
+strat:clust+hop2,4.364860841273822e-29,1.0,0.1340044774246686,32,advantage,False,False,False,
+strat:fsim+hop2,3.29675719769874e-24,1.0,0.024776907497055273,50,advantage,False,False,False,

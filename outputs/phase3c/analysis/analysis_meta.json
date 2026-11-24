@@ -1,0 +1,20 @@
+{
+ "config": "configs/phase3c.yaml",
+ "config_sha256": "5c5ea554d7910153b12ffd1b61d901e9b14f8d8569d099d98946bbc910d591fc",
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ },
+ "log": [
+  "citeseer__gcn: N=400, |L|=11, 76s",
+  "citeseer__sage: N=400, |L|=11, 76s",
+  "citeseer: arch differences and attribute descriptives"
+ ]
+}

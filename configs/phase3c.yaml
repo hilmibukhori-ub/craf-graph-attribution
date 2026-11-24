@@ -1,0 +1,40 @@
+# Phase 3C: independent calibration rerun plus ONE targeted CiteSeer pilot.
+# The Phase 3B NO-GO is immutable; this config does not launch a full benchmark.
+name: phase3c
+master_seed: 20270131
+attr_seed: 20270131
+out_dir: outputs/phase3c
+data_dir: data
+freeze_files: [docs/phase3c_protocol.md, data/raw/citeseer.npz]
+datasets:
+  citeseer: {file: raw/citeseer.npz, sha256: 280278b21b434c047922e8389518861416fb3ad39389c27865ff0e6bbb0aaab7, clusters: 400, chunk: 5}
+archs: [gcn, sage]
+draws: 2
+swap_factor: 5.0
+attempt_factor: 1000.0
+split: {n_train: 20, n_val: 30}
+lattice_attrs: [block, fsim, clust, hop2]
+max_order: 2
+admissibility: {n_samples: 20, n_diversity: 10}
+elements:
+  citeseer: [degree, "strat:block", "strat:clust", "strat:fsim", "strat:hop2", "strat:block+clust", "strat:block+fsim", "strat:block+hop2", "strat:clust+fsim", "strat:clust+hop2", "strat:fsim+hop2"]
+calibration:
+  dataset: cora
+  file: raw/cora.npz
+  clusters: 1500
+  chunk: 5
+  master_seed: 20270201
+  elements: [degree, "strat:block", "strat:deg", "strat:dlen", "strat:feat", "strat:block+deg", "strat:block+dlen", "strat:block+feat", "strat:deg+dlen", "strat:deg+feat", "strat:dlen+feat"]
+  primary: {n: 80, alpha: 0.05, direction: suf, bootstrap_reps: 10000}
+  signflip_permutations: 9999
+analysis:
+  delta: 0.005
+  alpha: 0.05
+  block: 100
+  b_conf: 80
+  budgets: [20, 40, 80]
+  fullset_budgets: [6, 12, 24]
+  fullset_r_dev: 20
+  adaptive: {search_frac: 0.3333333333, n_min: 5, d_floor: 0.003, kappa: 1.0}
+  calib_boot: 2000
+  calib_seed: 3403

@@ -1,0 +1,29 @@
+{
+  "C1_calibration": {
+    "primary_block_bootstrap_flag": false,
+    "t_holm_fwer_flag": false,
+    "pass": true,
+    "secondary_citeseer_warning": true
+  },
+  "C2_admissibility": {
+    "all_singletons_admissible": true,
+    "admissible_elements": 11,
+    "total_elements": 11,
+    "pass": true
+  },
+  "C3_strong_informativeness": {
+    "certified_minimal_outside_pcga": false,
+    "strict_frontier_or_gap_gain": false,
+    "certified_natural_nonmonotonicity": false,
+    "specificity_only": true,
+    "pass": false
+  },
+  "C4_cost": {
+    "gcn_confirmatory_cpu_hours": 2.077,
+    "sage_confirmatory_cpu_hours": 3.422,
+    "limit_cpu_hours": 12.0,
+    "pass": true
+  },
+  "phase3b_decision_preserved": "NO-GO",
+  "phase3c_decision": "NO-GO"
+}

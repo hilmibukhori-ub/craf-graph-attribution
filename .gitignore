@@ -1,0 +1,25 @@
+# OS / Python
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Manuscript (kept out of the repository until publication)
+paper/
+
+# Raw data: download from the original sources (see README)
+data/
+
+# Earlier code snapshots
+archive/
+
+# Large or intermediate run artefacts (raw pools stay on the compute cluster; checksums are committed)
+outputs/**/pool/
+outputs/**/calibration_pool/
+outputs/*_smoke/
+outputs/**/*.gz
+outputs/**/*.out
+outputs/**/logs/
+outputs/**/pool_meta/
+outputs/smoke/

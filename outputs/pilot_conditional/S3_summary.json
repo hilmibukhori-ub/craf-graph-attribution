@@ -1,0 +1,96 @@
+{
+ "scenario": "S3",
+ "instance": 0,
+ "R": 30,
+ "model": "gcn",
+ "eps": 0.005,
+ "marginal": {
+  "empty": {
+   "method": "t",
+   "n": 30,
+   "mean": 0.035155832355486964,
+   "se": 0.0010769124905804224,
+   "L": 0.03332602123753027,
+   "p": 7.601091290464209e-23
+  },
+  "degree": {
+   "method": "t",
+   "n": 30,
+   "mean": 0.06800161081252648,
+   "se": 0.002792889716949969,
+   "L": 0.0632561364123293,
+   "p": 3.071218215801021e-20
+  },
+  "strat:block": {
+   "method": "t",
+   "n": 30,
+   "mean": -0.005523340966727756,
+   "se": 0.0019471484011289585,
+   "L": -0.008831793439757457,
+   "p": 0.9999958773374439
+  },
+  "perm:block": {
+   "method": "t",
+   "n": 30,
+   "mean": 0.053533887779120375,
+   "se": 0.0027889146055441135,
+   "L": 0.048795167598146366,
+   "p": 3.433299644132505e-17
+  }
+ },
+ "iut": {
+  "method": "t",
+  "alpha": 0.05,
+  "eps": 0.005,
+  "comparators": "empty|degree|strat:block|perm:block",
+  "theta_hat": -0.005523340966727756,
+  "L_robust": -0.008831793439757457,
+  "p_iut": 0.9999958773374439,
+  "argmin_L": "strat:block",
+  "certified": false,
+  "mean[empty]": 0.035155832355486964,
+  "L[empty]": 0.03332602123753027,
+  "p[empty]": 7.601091290464209e-23,
+  "mean[degree]": 0.06800161081252648,
+  "L[degree]": 0.0632561364123293,
+  "p[degree]": 3.071218215801021e-20,
+  "mean[strat:block]": -0.005523340966727756,
+  "L[strat:block]": -0.008831793439757457,
+  "p[strat:block]": 0.9999958773374439,
+  "mean[perm:block]": 0.053533887779120375,
+  "L[perm:block]": 0.048795167598146366,
+  "p[perm:block]": 3.433299644132505e-17
+ },
+ "rank_tests": {
+  "degree": {
+   "method": "rank",
+   "K": 29,
+   "rank": 1,
+   "p": 0.03333333333333333
+  },
+  "strat:block": {
+   "method": "rank",
+   "K": 29,
+   "rank": 17,
+   "p": 0.5666666666666667
+  },
+  "perm:block": {
+   "method": "rank",
+   "K": 29,
+   "rank": 1,
+   "p": 0.03333333333333333
+  }
+ },
+ "note": "conditional on this graph, split, hub; not population inference",
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ }
+}

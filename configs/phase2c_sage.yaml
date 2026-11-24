@@ -1,0 +1,29 @@
+# Phase 2C neural replication: GraphSAGE (plain torch) on the most informative scenarios, K18.
+# Same master seed as configs/phase2c.yaml, so instances AND placebo graphs are identical to the
+# SGC-ridge pool (paired across models). Frozen before execution.
+name: phase2c_sage
+master_seed: 20261215
+model: sage
+draws: 2
+swap_factor: 5.0
+chunk: 40
+attrs: [block, w1, w2, w3, w4]                   # K = 18 candidates
+out_dir: outputs/phase2c_sage
+scenarios:
+  S7_hard: 7200
+  S8_small_hard: 7200
+  S8_large_hard: 7200
+analysis:
+  alpha: 0.05
+  alpha1: 0.01
+  eps: [0.005, 0.0]
+  block: 120
+  r_dev: 20
+  n_conf_max: 100
+  top_m: 2
+  search_frac: 0.3333333333
+  hit_tol: 0.002
+  d_floor: 0.003
+  audit_boot: 20000
+  k_configs:
+    - {name: K18, attrs: [block, w1, w2, w3, w4], budgets: [6, 9, 12, 24]}

@@ -1,0 +1,24 @@
+# Confirmatory synthetic study -- TEMPLATE ONLY, NOT RUN.
+# To be frozen (sha256 of this file + src/) only after Phase 2A gates are reviewed.
+# Sizes chosen from pilot Monte Carlo SEs: 2000 independent experiments per scenario give
+# MC SE <= 0.5 percentage points for a 5% rejection rate.
+name: confirmatory
+master_seed: 20270101        # never used before
+model: sgc_ridge
+draws: 2
+swap_factor: 5.0
+chunk: 100
+out_dir: outputs/confirmatory
+scenarios: {S0: 120000, S1_g100: 120000, S2: 120000, S3: 120000, S4: 120000, S5: 120000,
+            AA_degree: 120000, AA_block: 120000}
+analysis:
+  alpha: 0.05
+  eps: [0.005, 0.0]
+  block: 60
+  r_base: 12
+  r_dev: 10
+  top_m: 2
+  search_frac: 0.3333333333
+  hit_tol: 0.002              # near-tie tolerance for search hits (score units)
+  calibration_R: [12, 40]
+  calibration_methods: [t, boot, signflip, eb, wsr]

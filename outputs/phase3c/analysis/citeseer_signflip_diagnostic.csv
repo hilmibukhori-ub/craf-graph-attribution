@@ -1,0 +1,9 @@
+model,n,direction,rejections,tests,block_boot_lo,block_boot_hi,fwer_false_groups,fwer_groups,role
+gcn,20,adv,8,165,0.024242,0.078788,1,15,posthoc
+gcn,20,suf,9,165,0.024242,0.090909,1,15,posthoc
+gcn,40,adv,3,77,0.012987,0.077922,1,7,posthoc
+gcn,40,suf,4,77,0.012987,0.077922,1,7,posthoc
+sage,20,adv,15,165,0.060606,0.127273,2,15,posthoc
+sage,20,suf,10,165,0.024242,0.096970,2,15,posthoc
+sage,40,adv,8,77,0.051948,0.168831,3,7,posthoc
+sage,40,suf,5,77,0.012987,0.129870,3,7,posthoc

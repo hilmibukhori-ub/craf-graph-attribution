@@ -1,0 +1,7 @@
+dataset,model,run,cert_min,possible_min,n_advantage,n_sufficient,n_inconclusive,specificity_over_L,min_among_cert,gaps
+cora,gcn,reference,{},{},11,0,0,True,{},
+cora,gcn,confirm craf,{},{},11,0,0,True,{},
+cora,gcn,confirm craf_adaptive,{},{},11,0,0,True,{},
+cora,sage,reference,{},{},11,0,0,True,{},
+cora,sage,confirm craf,{},{},11,0,0,True,{},
+cora,sage,confirm craf_adaptive,{},{},11,0,0,True,{},

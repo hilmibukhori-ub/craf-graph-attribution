@@ -1,0 +1,71 @@
+{
+ "reference": {
+  "cert_min": [],
+  "possible_min": [],
+  "A": [
+   "degree",
+   "strat:block",
+   "strat:block+clust",
+   "strat:block+fsim",
+   "strat:block+hop2",
+   "strat:clust",
+   "strat:clust+fsim",
+   "strat:clust+hop2",
+   "strat:fsim",
+   "strat:fsim+hop2",
+   "strat:hop2"
+  ],
+  "C": [],
+  "specificity": true
+ },
+ "confirm_craf": {
+  "cert_min": [],
+  "min_among_cert": [],
+  "possible_min": [],
+  "gaps": {},
+  "A": [
+   "degree",
+   "strat:block",
+   "strat:block+clust",
+   "strat:block+fsim",
+   "strat:block+hop2",
+   "strat:clust",
+   "strat:clust+fsim",
+   "strat:clust+hop2",
+   "strat:fsim",
+   "strat:fsim+hop2",
+   "strat:hop2"
+  ],
+  "C": [],
+  "inconclusive": [],
+  "specificity": true
+ },
+ "confirm_craf_adaptive": {
+  "cert_min": [],
+  "min_among_cert": [],
+  "possible_min": [],
+  "gaps": {},
+  "A": [
+   "degree",
+   "strat:block",
+   "strat:block+clust",
+   "strat:block+fsim",
+   "strat:block+hop2",
+   "strat:clust",
+   "strat:clust+fsim",
+   "strat:clust+hop2",
+   "strat:fsim",
+   "strat:fsim+hop2",
+   "strat:hop2"
+  ],
+  "C": [],
+  "inconclusive": [],
+  "specificity": true,
+  "fallback": false,
+  "fits": 556,
+  "R1": 27,
+  "n_dominated": 0,
+  "alloc_max": 73,
+  "alloc_min": 5
+ }
+}

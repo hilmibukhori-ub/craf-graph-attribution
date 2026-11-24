@@ -1,0 +1,8 @@
+,0
+degree,0.02
+strat:a,0.008
+strat:b,0.02
+strat:c,0.002
+strat:a+b,0.0
+strat:a+c,0.002
+strat:b+c,0.002

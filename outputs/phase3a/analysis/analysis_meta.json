@@ -1,0 +1,27 @@
+{
+ "config": "configs/phase3a.yaml",
+ "config_sha256": "a16d284a6b9f3e1a8599d7e1a8d54eff2bc2e8a91ab1363162c2629cbc7a403a",
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ },
+ "log": [
+  "S7_hard__sgc_ridge: 3024 rows, 14400 instances, |L| = 16, 28s",
+  "S7_easy__sgc_ridge: 3024 rows, 14400 instances, |L| = 16, 26s",
+  "S8_small_hard__sgc_ridge: 1512 rows, 7200 instances, |L| = 16, 14s",
+  "N6_hard__sgc_ridge: 3024 rows, 14400 instances, |L| = 16, 26s",
+  "S7_hard__sage: 1512 rows, 7200 instances, |L| = 16, 12s",
+  "P3_multi__sgc_ridge: 1512 rows, 7200 instances, |L| = 16, 7s",
+  "SS_boundary: 36000 rows, 57s",
+  "SS_nonmono_A: 36000 rows, 53s",
+  "SS_nonmono_B: 36000 rows, 57s",
+  "SS_near: 36000 rows, 57s"
+ ]
+}

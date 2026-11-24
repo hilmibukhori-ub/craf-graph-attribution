@@ -1,0 +1,48 @@
+# Phase 2A synthetic pilot (population inference; replication unit = simulated graph instance).
+# Frozen before any pilot instance was generated.  DGP effect sizes were fixed in a separate
+# development phase (master seed 999) -- see docs/experiment_protocol.md.
+name: pilot
+master_seed: 20261123
+model: sgc_ridge             # closed-form SGC + ridge (Monte Carlo workhorse)
+draws: 2                     # placebo draws per candidate per instance in the pool
+swap_factor: 5.0             # swaps per edge (target), verified by the audit
+chunk: 100                   # instances per SLURM array task
+out_dir: outputs/pilot
+scenarios:                   # instances per scenario
+  S0: 4800
+  S1_g050: 2400
+  S1_g100: 4800
+  S1_g150: 2400
+  S1_g200: 2400
+  S1_hetero: 2400
+  S2: 4800
+  S3: 4800
+  S4: 4800
+  S5: 4800
+  AA_degree: 4800
+  AA_block: 4800
+analysis:
+  alpha: 0.05
+  eps: [0.005, 0.0]          # primary practical margin first (1 - Brier units); 0 secondary
+  block: 60                  # instances per independent Monte Carlo experiment
+  r_base: 12                 # budget anchor: B = r_base * (2 + K) fits (fixed IUT over all K)
+  r_dev: 10                  # development instances per experiment (search only, val scores)
+  top_m: 2                   # nulls frozen by the search
+  search_frac: 0.3333333333  # share of B spent on dev search
+  hit_tol: 0.002             # near-tie tolerance for search hits (score units)
+  calibration_R: [12, 40]
+  calibration_methods: [t, boot, signflip, eb, wsr]
+gnn_pilot:
+  models: [gcn, sage]
+  scenarios: {S1_g150: 48, S3: 48, S4: 48, S5: 48}
+  specs: [er, degree, perm:block, strat:block, strat:w3, strat:block+w3]
+  draws: 1
+  chunk: 12
+  out_dir: outputs/pilot_gnn
+conditional_demo:
+  model: gcn
+  scenarios: [S1_g150, S3]
+  instance: 0
+  replicates: 30
+  specs: [degree, strat:block, perm:block]
+  out_dir: outputs/pilot_conditional

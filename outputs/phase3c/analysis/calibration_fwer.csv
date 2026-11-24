@@ -1,0 +1,2 @@
+method,n,groups,false_groups,fwer,wilson_lo,wilson_hi,persistent_flag
+t+Holm,80,18,1,0.05555555555555555,0.009875190978303097,0.25757300781872594,False

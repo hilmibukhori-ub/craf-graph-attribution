@@ -1,0 +1,36 @@
+# Phase 3D mini-pilot: exploratory extension of the frozen Phase 3C CiteSeer lattice.
+# It reuses Phase 3C clusters 0..23 and fits only previously unevaluated order-3/4
+# preservation controls. It is not a new confirmatory evaluation.
+name: phase3d_mini
+master_seed: 20270131
+attr_seed: 20270131
+out_dir: outputs/phase3d_mini
+data_dir: data
+freeze_files: [docs/phase3d_mini_protocol.md, data/raw/citeseer.npz]
+datasets:
+  citeseer: {file: raw/citeseer.npz, sha256: 280278b21b434c047922e8389518861416fb3ad39389c27865ff0e6bbb0aaab7, clusters: 24, chunk: 4}
+archs: [gcn]
+draws: 1
+swap_factor: 5.0
+attempt_factor: 1000.0
+split: {n_train: 20, n_val: 30}
+lattice_attrs: [block, fsim, clust, hop2]
+max_order: 4
+admissibility: {n_samples: 10, n_diversity: 10}
+elements:
+  citeseer:
+    - "strat:block+clust+fsim"
+    - "strat:block+clust+hop2"
+    - "strat:block+fsim+hop2"
+    - "strat:clust+fsim+hop2"
+    - "strat:block+clust+fsim+hop2"
+analysis:
+  delta: 0.005
+  alpha: 0.05
+  clusters: 24
+  phase3c_pool: outputs/phase3c/pool
+  feasibility:
+    require_admissible: true
+    require_delta_reduction: true
+    require_delta_inside_95pct_interval: true
+

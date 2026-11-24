@@ -1,0 +1,51 @@
+{
+  "status": "STOP",
+  "scope": "exploratory_mini_pilot",
+  "delta": 0.005,
+  "clusters": 24,
+  "architecture": "gcn",
+  "best_lower_order": {
+    "element": "strat:fsim+hop2",
+    "delta_hat": 0.0226864852,
+    "se": 0.0011600380
+  },
+  "best_higher_order": {
+    "element": "strat:block+fsim+hop2",
+    "delta_hat": 0.0139941054,
+    "se": 0.0010009881,
+    "ci95": [0.0119234039, 0.0160648070],
+    "admissible": true
+  },
+  "paired_reduction": {
+    "estimate": 0.0086923798,
+    "se": 0.0012706884,
+    "ci95": [0.0060637605, 0.0113209991]
+  },
+  "feasibility_gates": {
+    "best_new_element_admissible": true,
+    "point_estimate_reduced": true,
+    "delta_inside_ordinary_95pct_interval": false
+  },
+  "exploratory_craf": {
+    "evaluated_elements": 14,
+    "advantage": 14,
+    "sufficient": 0,
+    "inconclusive": 0,
+    "certified_minimal": [],
+    "possible_minimal": [],
+    "specificity": true
+  },
+  "cost": {
+    "gcn_fits": 144,
+    "mlp_fits": 24,
+    "total_fits": 168,
+    "gcn_fit_cpu_hours": 0.3217449,
+    "mlp_fit_cpu_hours": 0.0541195,
+    "sum_chunk_wall_hours": 0.3892059,
+    "parallel_elapsed_seconds_max_chunk": 252.0638
+  },
+  "phase3b_decision_changed": false,
+  "phase3c_decision_changed": false,
+  "full_benchmark_authorized": false
+}
+

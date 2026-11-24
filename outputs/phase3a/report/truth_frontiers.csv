@@ -1,0 +1,11 @@
+pool,|L|,F_true,n_sufficient,min_delta,closest_to_margin,nonmonotone_pairs
+N6_hard__sgc_ridge,16,strat:w3,5,-6.2292461527211335e-06,strat:w2+w3=0.0001; strat:w1+w3=0.0001; strat:block+w3=0.0000,0
+P3_multi__sgc_ridge,16,strat:w1+w2|strat:w3,6,-0.0001439173262722,strat:block+w3=0.0001; strat:w1+w2=0.0000; strat:w2+w3=-0.0000,0
+S7_easy__sgc_ridge,16,strat:w1+w2,1,0.0,strat:w1+w2=0.0000; strat:block+w2=0.0260; strat:block+w1=0.0261,0
+S7_hard__sage,16,strat:w1+w2,1,0.0,strat:w1+w2=0.0000; strat:block+w3=0.0143; strat:w2+w3=0.0147,0
+S7_hard__sgc_ridge,16,strat:w1+w2,1,0.0,strat:w1+w2=0.0000; strat:block+w3=0.0109; strat:w2+w3=0.0112,0
+S8_small_hard__sgc_ridge,16,∅ (none sufficient),0,0.0106142274124847,strat:w1+w2=0.0106; strat:block+w3=0.0205; strat:w1+w3=0.0208,0
+SS_boundary__semisynthetic,7,∅ (none sufficient),0,0.005,degree=0.0050; strat:a=0.0050; strat:b=0.0050,0
+SS_near__semisynthetic,7,strat:a+b|strat:c,4,0.0,strat:a=0.0080; strat:c=0.0020; strat:a+c=0.0020,0
+SS_nonmono_A__semisynthetic,7,degree,2,0.0,degree=0.0000; strat:a+b=0.0000; strat:a=0.0200,5
+SS_nonmono_B__semisynthetic,7,strat:a|strat:b+c,3,0.0,strat:a=0.0000; strat:a+c=0.0000; strat:b+c=0.0000,1

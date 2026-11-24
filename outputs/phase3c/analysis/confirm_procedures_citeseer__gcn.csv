@@ -1,0 +1,8 @@
+procedure,b,budget,fits,reported,F_true,exact,false_member,n_missed,n_reported,class_error,false_adv,false_suf,n_A,n_C,n_inconclusive,specificity_claim,covered,unc_size,possible_min,min_among_cert,min_cert_not_certmin,min_cert_false,lattice_size,delta,alpha,fallback,R1,n_dominated,alloc_max,alloc_min,pcga_edge_supported
+craf,80,960,960,,,True,False,0,0,False,False,False,11.0,0.0,0.0,True,True,0.0,,,0.0,False,11,0.005,0.05,,,,,,
+craf_children,80,960,960,,,True,False,0,0,False,False,False,11.0,0.0,0.0,True,,,,,,,11,0.005,0.05,,,,,,
+factorial_unadj,80,960,960,,,True,False,0,0,False,False,False,11.0,0.0,0.0,True,,,,,,,11,0.005,0.05,,,,,,
+ni_holm,80,960,960,,,True,False,0,0,False,False,False,0.0,0.0,11.0,False,,,,,,,11,0.005,0.05,,,,,,
+naive_point,80,960,960,,,True,False,0,0,,,,,,,,,,,,,,11,0.005,0.05,,,,,,
+craf_adaptive,80,960,556,,,True,False,0,0,False,False,False,11.0,0.0,0.0,True,True,0.0,,,0.0,False,11,0.005,0.05,False,27.0,0.0,73.0,5.0,
+pcga_l,80,960,500,,,True,False,0,0,,,,,,,,,,,,,,11,0.005,0.05,,,,,,True

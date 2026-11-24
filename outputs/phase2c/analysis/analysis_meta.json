@@ -1,0 +1,23 @@
+{
+ "config": "configs/phase2c.yaml",
+ "config_sha256": "0a84a59804f95c96b6a7e73bd3a47430bc6097f0a18890c0e6aeb0ada93081fb",
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ },
+ "log": [
+  "S7_hard: 15120 rows in 2129s; audit valid rate 1.0000",
+  "S7_easy: 15120 rows in 2022s; audit valid rate 1.0000",
+  "S8_small_hard: 7560 rows in 834s; audit valid rate 1.0000",
+  "S8_large_hard: 7560 rows in 752s; audit valid rate 1.0000",
+  "S8_small_easy: 7560 rows in 722s; audit valid rate 1.0000",
+  "S8_large_easy: 7560 rows in 658s; audit valid rate 1.0000"
+ ]
+}

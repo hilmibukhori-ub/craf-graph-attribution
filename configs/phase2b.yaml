@@ -1,0 +1,33 @@
+# Phase 2B: targeted novelty validation (population inference; unit = simulated instance).
+# Frozen (scripts/freeze_plan.py) BEFORE any pool instance with master_seed 20261201 exists.
+# DGP effect sizes come from the dev-seed-999 calibration recorded in docs/phase2b_protocol.md.
+name: phase2b
+master_seed: 20261201
+model: sgc_ridge
+draws: 2
+swap_factor: 5.0
+chunk: 120
+attrs: [block, w1, w2, w3, w4, w5, w6, w7, w8]   # K = 48 candidates in the pool
+out_dir: outputs/phase2b
+scenarios:
+  S6_small_hard: 7200
+  S6_large_hard: 7200
+  S6_small_easy: 7200
+  S6_large_easy: 7200
+  N6_hard: 14400
+  N6_easy: 14400
+analysis:
+  alpha: 0.05
+  alpha1: 0.01               # dev-stage level of fullset_elim (alpha2 = alpha - alpha1)
+  eps: [0.005, 0.0]          # primary first
+  block: 120                 # instances per independent experiment
+  r_dev: 20                  # development instances per experiment
+  n_conf_max: 100            # confirmatory instances per experiment
+  top_m: 2
+  search_frac: 0.3333333333
+  hit_tol: 0.002
+  n_min: 5                  # minimum replicates per comparator in full-set allocation
+  d_floor: 0.003
+  k_configs:
+    - {name: K18, attrs: [block, w1, w2, w3, w4], budgets: [6, 12, 24]}
+    - {name: K48, attrs: [block, w1, w2, w3, w4, w5, w6, w7, w8], budgets: [6, 12]}

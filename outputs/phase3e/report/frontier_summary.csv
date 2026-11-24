@@ -1,0 +1,13 @@
+dataset,model,run,cert_min,possible_min,n_advantage,n_sufficient,n_inconclusive,specificity_over_L,min_among_cert,gaps
+roman_empire,gcn,reference,{∅(degree)},{∅(degree)},0,10,1,False,{},
+roman_empire,gcn,confirm craf,{∅(degree)},{∅(degree)},0,10,1,False,{∅(degree)},
+roman_empire,gcn,confirm craf_adaptive,{∅(degree)},{∅(degree)},0,10,1,False,{∅(degree)},
+roman_empire,sage,reference,{},{fsim+hop2},10,0,1,False,{},
+roman_empire,sage,confirm craf,{},{fsim+hop2},10,0,1,False,{},
+roman_empire,sage,confirm craf_adaptive,{},{fsim+hop2},10,0,1,False,{},
+amazon_ratings,gcn,reference,{},"{clust+fsim, fsim+hop2}",9,0,2,False,{},
+amazon_ratings,gcn,confirm craf,{},"{clust+fsim, fsim+hop2}",9,0,2,False,{},
+amazon_ratings,gcn,confirm craf_adaptive,{},"{clust+fsim, fsim+hop2}",9,0,2,False,{},
+amazon_ratings,sage,reference,{},"{clust+fsim, fsim+hop2}",9,0,2,False,{},
+amazon_ratings,sage,confirm craf,{},"{clust+fsim, fsim+hop2}",9,0,2,False,{},
+amazon_ratings,sage,confirm craf_adaptive,{},"{clust+fsim, fsim+hop2}",9,0,2,False,{},

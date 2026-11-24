@@ -1,0 +1,20 @@
+# Smoke test: tiny, runs on a laptop CPU in ~1-2 minutes. NOT a result.
+name: smoke
+master_seed: 424242          # distinct from pilot/confirmatory seeds
+model: sgc_ridge
+draws: 2
+swap_factor: 5.0
+chunk: 20
+out_dir: outputs/smoke
+scenarios: {S1_g150: 60, S5: 60, AA_degree: 60}
+analysis:
+  alpha: 0.05
+  eps: [0.005, 0.0]
+  block: 60
+  r_base: 12
+  r_dev: 10
+  top_m: 2
+  search_frac: 0.3333333333
+  hit_tol: 0.002              # near-tie tolerance for search hits (score units)
+  calibration_R: [12]
+  calibration_methods: [t, boot, signflip, eb, wsr]

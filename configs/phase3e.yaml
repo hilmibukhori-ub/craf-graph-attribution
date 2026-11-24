@@ -1,0 +1,33 @@
+# Phase 3E: one preregistered heterophilous real-world pilot (Roman-empire + Amazon-ratings).
+# Phase 3B/3C NO-GO decisions and the Phase 3D stop are immutable; no full benchmark follows automatically.
+name: phase3e
+master_seed: 20270301
+attr_seed: 20270301
+out_dir: outputs/phase3e
+data_dir: data
+freeze_files: [docs/phase3e_protocol.md, data/raw/roman_empire.npz, data/raw/amazon_ratings.npz]
+datasets:
+  roman_empire: {file: raw/roman_empire.npz, sha256: a58ba741d123bf892fe5c872138d07463d75a2e9012360b8dd78ac2d4766d428, clusters: 400, chunk: 1}
+  amazon_ratings: {file: raw/amazon_ratings.npz, sha256: 4c3a3e3b9d9f6cba0fede4625a00aad8c5721c1a36ed771367f446763241c7dd, clusters: 400, chunk: 1}
+archs: [gcn, sage]
+draws: 2
+swap_factor: 5.0
+attempt_factor: 1000.0
+split: {train_frac: 0.5, val_frac: 0.25}
+lattice_attrs: [block, fsim, clust, hop2]
+max_order: 2
+admissibility: {n_samples: 20, n_diversity: 10}
+elements:
+  roman_empire: [degree, "strat:block", "strat:clust", "strat:fsim", "strat:hop2", "strat:block+clust", "strat:block+fsim", "strat:block+hop2", "strat:clust+fsim", "strat:clust+hop2", "strat:fsim+hop2"]
+  amazon_ratings: [degree, "strat:block", "strat:clust", "strat:fsim", "strat:hop2", "strat:block+clust", "strat:block+fsim", "strat:block+hop2", "strat:clust+fsim", "strat:clust+hop2", "strat:fsim+hop2"]
+analysis:
+  delta: 0.005
+  alpha: 0.05
+  block: 100
+  b_conf: 80
+  budgets: [20, 40, 80]
+  fullset_budgets: [6, 12, 24]
+  fullset_r_dev: 20
+  adaptive: {search_frac: 0.3333333333, n_min: 5, d_floor: 0.003, kappa: 1.0}
+  calib_boot: 2000
+  calib_seed: 3505

@@ -1,0 +1,22 @@
+{
+ "dataset": "amazon_computers",
+ "raw_sha256": "736ba1d9fd85eac2da83a5ad25c463f04b0031a6ca01563f90a7099d9e8ffb2c",
+ "attrs_sha256": "fad396c4986b203a668ee4a3cbef25ec41e627d041bca39f893c397bdee6214d",
+ "n": 13752,
+ "m": 245861,
+ "n_features": 767,
+ "n_classes": 10,
+ "isolated_nodes": 281,
+ "seconds": 572.5586647987366,
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "dataset": "cora",
+ "raw_sha256": "068e22d90c3849b4057dfb05851741428992af058efcd4e7ebb4186f3d581de2",
+ "attrs_sha256": "f729de3bf9e30630d8d4e81a06090349b21734ae383293c40d9be18626330a31",
+ "n": 2708,
+ "m": 5278,
+ "n_features": 1433,
+ "n_classes": 7,
+ "isolated_nodes": 0,
+ "seconds": 20.49663996696472,
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ }
+}

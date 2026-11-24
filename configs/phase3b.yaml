@@ -1,0 +1,32 @@
+# Phase 3B (CRAF real-world pilot). Lattice elements and cluster counts were fixed after the label-free
+# admissibility audit and the timing probe; hash-frozen (scripts/freeze_plan.py) before the pool.
+# Amazon Computers is NOT run in this pilot (timing: ~200-365 s per fit -> ~4 CPU-h per cluster);
+# cost projection only (docs/phase3b_protocol.md section 9).
+name: phase3b
+master_seed: 20261229
+attr_seed: 20261229
+out_dir: outputs/phase3b
+data_dir: data
+datasets:
+  cora: {file: raw/cora.npz, clusters: 1500, chunk: 5}
+archs: [gcn, sage]
+draws: 2
+swap_factor: 5.0
+attempt_factor: 1000.0
+split: {n_train: 20, n_val: 30}
+lattice_attrs: [deg, block, feat, dlen]
+max_order: 2
+admissibility: {n_samples: 20, n_diversity: 10}
+elements:   # all 11 admissible (outputs/phase3b/admissibility/cora_elements.csv)
+  cora: [degree, "strat:block", "strat:deg", "strat:dlen", "strat:feat", "strat:block+deg", "strat:block+dlen", "strat:block+feat", "strat:deg+dlen", "strat:deg+feat", "strat:dlen+feat"]
+analysis:
+  delta: 0.005                 # = eps / delta of Phases 2B-3A (1 - Brier/2 units)
+  alpha: 0.05
+  block: 100                   # block 0 = confirmatory; clusters >= 100 = reference
+  b_conf: 80                   # confirmatory budget per element (B = b (1 + |L|))
+  budgets: [20, 40, 80]        # resampling comparison
+  fullset_budgets: [6, 12, 24] # RUSA scalar full-set claim (B = b (2 + K)), as in Phase 2C
+  fullset_r_dev: 20
+  adaptive: {search_frac: 0.3333333333, n_min: 5, d_floor: 0.003, kappa: 1.0}
+  calib_boot: 2000
+  calib_seed: 3302

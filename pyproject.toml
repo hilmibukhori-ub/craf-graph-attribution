@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rusa"
+version = "0.1.0"
+description = "CRAF and RUSA: certified graph-property attribution for graph neural networks with admissible null graphs"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "pandas>=1.5",
+  "pyyaml>=6",
+  "torch>=2.1",
+]
+
+[project.optional-dependencies]
+fast = ["numba>=0.58"]
+plots = ["matplotlib>=3.7"]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

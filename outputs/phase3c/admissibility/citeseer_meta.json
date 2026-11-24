@@ -1,0 +1,22 @@
+{
+ "dataset": "citeseer",
+ "raw_sha256": "280278b21b434c047922e8389518861416fb3ad39389c27865ff0e6bbb0aaab7",
+ "attrs_sha256": "76433e70f32fd246e6851f96a71865d51e57b74a5b46ffa184ef0135ccc14b5c",
+ "n": 3312,
+ "m": 4536,
+ "n_features": 3703,
+ "n_classes": 6,
+ "isolated_nodes": 48,
+ "seconds": 17.71983814239502,
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ }
+}

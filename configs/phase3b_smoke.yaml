@@ -1,0 +1,20 @@
+# Timing / plumbing smoke ONLY (dev seed 999; outputs never reported as results).
+name: phase3b_smoke
+master_seed: 999
+attr_seed: 20261229
+out_dir: outputs/phase3b_smoke
+data_dir: data
+datasets:
+  cora: {file: raw/cora.npz, clusters: 2, chunk: 1}
+  amazon_computers: {file: raw/amazon_electronics_computers.npz, clusters: 1, chunk: 1}
+archs: [gcn, sage]
+draws: 2
+swap_factor: 5.0
+attempt_factor: 1000.0
+split: {n_train: 20, n_val: 30}
+lattice_attrs: [deg, block, feat, dlen]
+max_order: 2
+admissibility: {n_samples: 20, n_diversity: 10}
+elements:
+  cora: [degree, "strat:block", "strat:deg", "strat:dlen", "strat:feat", "strat:block+deg", "strat:block+dlen", "strat:block+feat", "strat:deg+dlen", "strat:deg+feat", "strat:dlen+feat"]
+  amazon_computers: [degree, "strat:block", "strat:deg", "strat:dlen", "strat:feat", "strat:block+deg", "strat:block+dlen", "strat:block+feat", "strat:deg+dlen", "strat:deg+feat", "strat:dlen+feat"]

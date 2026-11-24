@@ -1,0 +1,16 @@
+procedure,n_or_b,scheme,groups,fwer,false_adv,false_suf,source,fallback_rate
+craf,20,disjoint,15,0.13333333333333333,0.13333333333333333,0.0,aa,
+craf,40,disjoint,7,0.14285714285714285,0.14285714285714285,0.0,aa,
+craf,80,disjoint,3,0.0,0.0,0.0,aa,
+craf_adaptive,20,disjoint,3,0.0,0.0,0.0,aa,0.0
+craf_adaptive,20,bootstrap,2000,0.045,0.0255,0.0195,aa,0.0
+craf_adaptive,40,disjoint,3,0.0,0.0,0.0,aa,0.0
+craf_adaptive,40,bootstrap,2000,0.041,0.0225,0.019,aa,0.0
+craf_adaptive,80,disjoint,3,0.0,0.0,0.0,aa,0.0
+craf_adaptive,80,bootstrap,2000,0.0445,0.025,0.02,aa,0.0
+craf,20,disjoint,15,0.0,0.0,0.0,centred,
+craf,40,disjoint,7,0.0,0.0,0.0,centred,
+craf,80,disjoint,3,0.0,0.0,0.0,centred,
+craf_adaptive,20,disjoint,3,0.0,0.0,0.0,centred,0.0
+craf_adaptive,40,disjoint,3,0.0,0.0,0.0,centred,0.0
+craf_adaptive,80,disjoint,3,0.0,0.0,0.0,centred,0.0

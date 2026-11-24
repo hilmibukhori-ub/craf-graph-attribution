@@ -1,0 +1,20 @@
+{
+ "config": "configs/phase3b.yaml",
+ "config_sha256": "c1a7a9cd16139443e02d9a8bb48bc9d85d2d83e8cc5e29b5e1b9875ee2b927b3",
+ "env": {
+  "python": "3.10.8",
+  "platform": "Linux-4.18.0-553.146.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.24.2",
+  "scipy": "1.10.1",
+  "pandas": "1.5.3",
+  "torch": "2.1.2",
+  "torch_geometric": "unavailable",
+  "networkx": "3.0",
+  "yaml": "6.0"
+ },
+ "log": [
+  "cora__gcn: N=1500, |L|=11, 82s",
+  "cora__sage: N=1500, |L|=11, 82s",
+  "cora: arch differences and attribute descriptives"
+ ]
+}
